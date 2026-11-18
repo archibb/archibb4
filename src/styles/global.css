@@ -1,0 +1,64 @@
+/* import font */ 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Special+Gothic+Expanded+One&display=swap');
+
+:root {
+    --black: #111111;
+    --charcoal: #222222;
+    --dark: #333333;
+    --light: #777777;
+    --paper: #f4f3ee;
+    --white: #ffffff;
+    --yellow: #f5d400;
+    --font-head: 'Special Gothic Expanded One', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+    color: var(--paper);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+main {
+    padding-left: 7.5rem;    /* pushes the page contents to the right */
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.active {
+    text-decoration: none;
+}
+
+h1 {
+    color: black;
+}
+
+.section {
+    height: 100vh
+}
