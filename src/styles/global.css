@@ -62,3 +62,140 @@ h1 {
 .section {
     height: 100vh
 }
+
+/*   SIDE NAVBAR   */
+.nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;   /* moves the nav item a little to the left */
+    z-index: 50; /* infront of page contents */
+    width: 7.5rem;
+    height: 100%;  
+    padding: 1.5rem 0 0;
+    background: var(--black);
+    border-right: 1px dashed var(--light);
+}
+
+.logo {
+    padding: 0 1rem 1.5rem; /* centers the logo vertically & horizontally */
+    color: var(--white);
+    font-family: var(--font-head);
+    font-size: 0.9rem;
+    letter-spacing: 0.10rem;
+}
+
+.ibb {
+    color: var(--yellow);
+}
+
+
+/* for mobile */
+.nav-toggle {
+    display: none;
+    flex-shrink: 0;
+    color: white;
+    font-family: var(--font-mono);
+}
+
+.nav.open .nav-panel {
+    display: block;
+}
+
+.nav-links {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    min-height: 48px;
+    padding: 1rem;
+    gap: 0.1rem;
+    color: var(--paper);
+    border-top: 1px dashed var(--dark);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+.nav-no {
+    font-family: var(--font-head);
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+
+.nav-links:hover .nav-label {
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+    text-underline-offset: 5px;
+}
+
+@media (max-width: 900px) {
+    main {
+        padding-left: 0;
+        padding-top: 3.5rem;
+    }
+
+    .nav {
+        position: fixed;
+        bottom: auto;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 3.5rem;
+        padding: 0 clamp(1rem, 4vw, 3.5rem);
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-right: 0;
+
+    }
+
+    .logo {
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        min-height: 44px;
+        padding: 0.5rem 0.9rem;
+        background: none;
+        border: 1px solid var(--light);
+        font-family: var(--font-mono);
+        font-size: 0.80rem;
+    }
+
+    .nav-toggle:hover {
+        border-color: var(--yellow);
+    }
+
+    .nav-panel {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        background: var(--black);
+        opacity: 98%;
+    }
+
+    .nav.open .nav-panel {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 1rem;
+        padding: clamp(1rem, 4vw, 3.5rem);
+        font-size: 0.85rem;
+    }
+
+    .nav-no {
+        font-family: var(--font-mono);
+        font-size: 0.80rem;
+    }
+}
