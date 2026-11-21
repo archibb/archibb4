@@ -5,9 +5,8 @@ import { FaBars } from 'react-icons/fa'
 const navItems = [
   { id: 'home', no: '00', label: 'HOME'},
   { id: 'about', no: '01', label: 'ABOUT'},
-  { id: 'education', no: '02', label: 'EDUCATION'},
-  { id: 'skills', no: '03', label: 'SKILLS'},
-  { id: 'contact', no: '04', label: 'CONTACT'},
+  { id: 'skills', no: '02', label: 'SKILLS'},
+  { id: 'contact', no: '03', label: 'CONTACT'},
 ]
 
 function Navbar () {
