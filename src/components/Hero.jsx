@@ -1,5 +1,6 @@
 import { motion } from "motion/react"
 import profile from '../assets/hero1.png'
+import mobile from '../assets/hero-mobile.jpg'
 
 const ease = [0.22, 1, 0.36, 1]
 
@@ -8,6 +9,10 @@ function Hero() {
     return (
         <section id="home" className="hero section">
             <div className="hero-cont">
+
+                
+                <img src={mobile} alt="photo of iza bless" className="hero-mobile" />
+                
 
                 <div className="hero-head">
                     <motion.p className="intro"
